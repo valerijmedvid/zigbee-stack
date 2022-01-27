@@ -1,0 +1,12 @@
+.env
+*.conf
+*.passwd
+
+/mosquitto/log
+/mosquitto/data
+
+/zigbee2mqtt/log
+/zigbee2mqtt/coordinator_backup.json
+/zigbee2mqtt/database.db
+/zigbee2mqtt/secret.yaml
+/zigbee2mqtt/devices.yaml

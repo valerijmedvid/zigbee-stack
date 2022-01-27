@@ -2,3 +2,15 @@ version: '3.9'
 
 services:
 
+  mosquitto:
+    container_name: mosquitto
+    image: eclipse-mosquitto:2.0.14
+    user: "1883:996"
+    ports:
+      - 1883:1883
+      - 9001:9001
+    restart: always
+    volumes:
+      - ./mosquitto/:/mosquitto/:rw
+    env_file:
+      - .env

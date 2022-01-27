@@ -14,3 +14,15 @@ services:
       - ./mosquitto/:/mosquitto/:rw
     env_file:
       - .env
+
+  zigbee2mqtt:
+    container_name: zigbee2mqtt
+    image: koenkk/zigbee2mqtt:1.22.2
+    network_mode: host
+    restart: always
+    volumes:
+      - ./zigbee2mqtt:/app/data
+    devices:
+      - /dev/ttyACM0:/dev/ttyACM0
+    depends_on:
+      - mosquitto

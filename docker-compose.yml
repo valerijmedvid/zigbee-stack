@@ -5,11 +5,11 @@ services:
   mosquitto:
     container_name: mosquitto
     image: eclipse-mosquitto:2.0.14
-    user: "1883:996"
+    user: 1883:996
     ports:
       - 1883:1883
       - 9001:9001
-    restart: always
+    restart: unless-stopped
     volumes:
       - ./mosquitto/:/mosquitto/:rw
     env_file:
@@ -19,10 +19,27 @@ services:
     container_name: zigbee2mqtt
     image: koenkk/zigbee2mqtt:1.22.2
     network_mode: host
-    restart: always
+    restart: unless-stopped
     volumes:
       - ./zigbee2mqtt:/app/data
     devices:
       - /dev/ttyACM0:/dev/ttyACM0
     depends_on:
       - mosquitto
+
+  node-red:
+    container_name: node-red
+    image: nodered/node-red:2.1.6
+    ports:
+      - 1880:1880
+    restart: unless-stopped
+    volumes:
+      - ./node-red:/data
+    devices:
+      - /dev/ttyACM0:/dev/ttyACM0
+    env_file:
+      - .env
+    depends_on:
+      - mosquitto
+    environment:
+      - TZ=Europe/Prague

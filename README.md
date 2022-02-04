@@ -9,3 +9,5 @@
 ### Software
 - **Eclipse Mosquitto** like MQTT broker - [mosquitto](https://mosquitto.org/)
 - **Zigbee2MQTT** for communication between antenna and MQTT broker - [zigbee2mqtt](https://www.zigbee2mqtt.io/)
+- **Node-RED** for communication between antenna and MQTT broker - [node-red](https://nodered.org/)
+- **Home Assistant** for communication between antenna and MQTT broker - [homeassistant](https://www.home-assistant.io/)

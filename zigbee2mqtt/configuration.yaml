@@ -1,5 +1,5 @@
 # Home Assistant integration (MQTT discovery)
-homeassistant: false
+homeassistant: true
 
 # allow new devices to join
 permit_join: true

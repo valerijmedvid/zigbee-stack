@@ -43,3 +43,15 @@ services:
       - mosquitto
     environment:
       - TZ=Europe/Prague
+
+  homeassistant:
+    container_name: home-assistant
+    image: homeassistant/home-assistant:2022.2
+    volumes:
+      # Local path where your home assistant config will be stored
+      - ./home-assistant:/config
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+    network_mode: host
+    depends_on:
+      - mosquitto

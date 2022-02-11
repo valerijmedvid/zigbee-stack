@@ -48,10 +48,21 @@ services:
     container_name: home-assistant
     image: homeassistant/home-assistant:2022.2
     volumes:
-      # Local path where your home assistant config will be stored
       - ./home-assistant:/config
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
     network_mode: host
     depends_on:
       - mosquitto
+      - mariadb
+
+  mariadb:
+    image: linuxserver/mariadb:10.5.13-alpine
+    container_name: mariadb
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./mariadb:/var/lib/mysql
+    ports:
+      - "3306:3306"

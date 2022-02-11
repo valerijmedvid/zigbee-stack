@@ -9,6 +9,6 @@
 ### Software
 - **Eclipse Mosquitto** like MQTT broker - [mosquitto](https://mosquitto.org/)
 - **Zigbee2MQTT** for communication between antenna and MQTT broker - [zigbee2mqtt](https://www.zigbee2mqtt.io/)
-- **Node-RED** creating automatision visualy - [node-red](https://nodered.org/)
+- **Node-RED** creating automation visually - [node-red](https://nodered.org/)
 - **Home Assistant** better UI for smartHome. A lot of plugins and integrations - [homeassistant](https://www.home-assistant.io/)
 - **MariaDB** saving stats, logs from Home Assistant - [mariadb](https://mariadb.org/)

@@ -2,7 +2,7 @@
 
 ### Hardware
 - Raspberry Pi 4 Model B - 4GB RAM
-- CC2531 USB Sniffer module
+- CC2652R USB Sniffer module [electrolama](https://shop.electrolama.com/collections/usb-rf-sticks/products/zzh-multiprotocol-rf-stick)
 - Zigbee devices (buttons, bulbs, temperature & humidity sensors) -> [List of supported devices](https://www.zigbee2mqtt.io/supported-devices/)
 
 

@@ -13,8 +13,11 @@ mqtt:
 
 # Serial settings
 serial:
-  port: /dev/ttyACM0
+  port: /dev/ttyUSB0
+  baudrate: 115200
   disable_led: true
+advanced:
+  rtscts: false
 
 # Devices settings
 devices: devices.yaml

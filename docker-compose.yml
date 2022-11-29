@@ -17,7 +17,7 @@ services:
 
   zigbee2mqtt:
     container_name: zigbee2mqtt
-    image: koenkk/zigbee2mqtt:1.23.0
+    image: koenkk/zigbee2mqtt:1.28.2
     network_mode: host
     restart: unless-stopped
     volumes:
